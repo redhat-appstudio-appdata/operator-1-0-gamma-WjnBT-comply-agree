@@ -23,7 +23,7 @@ spec:
         app.kubernetes.io/instance: sigstore-operator-bundle
     spec:
       containers:
-      - image: image
+      - image: quay.io/redhat-user-workloads/rhtas-tenant/operator-1-0-gamma/sigstore-operator-bundle@sha256:344899526feec80942785f6a71914ab47b13fc9fd7ba0f0a58f0bffe42f13ba9
         imagePullPolicy: Always
         name: container-image
         resources:
