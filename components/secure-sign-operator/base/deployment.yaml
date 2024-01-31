@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: secure-sign-operator
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: secure-sign-operator
+    app.kubernetes.io/part-of: operator-1-0-gamma
+  name: secure-sign-operator
+spec:
+  replicas: 1
+  revisionHistoryLimit: 0
+  selector:
+    matchLabels:
+      app.kubernetes.io/instance: secure-sign-operator
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app.kubernetes.io/instance: secure-sign-operator
+    spec:
+      containers:
+      - image: image
+        imagePullPolicy: Always
+        name: container-image
+        resources:
+          requests:
+            cpu: 200m
+            memory: 256Mi
+status: {}
