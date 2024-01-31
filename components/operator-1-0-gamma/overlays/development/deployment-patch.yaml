@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: operator-1-0-gamma
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-user-workloads/rhtas-tenant/operator-1-0-gamma/operator-1-0-gamma@sha256:1cf6a2a13dc70ca705142904253cf9aaaf7d82ad58a869e884d658b2eeb8ea24
+        name: container-image
+        resources: {}
+status: {}
